@@ -30,5 +30,9 @@ app.use(require("./routes/compose"))
 app.use(require("./routes/blog"))
 app.use(require("./routes/signup"))
 
+app.get('*', (req,res) => {
+   res.render('404');
+});
+
 //server config
 app.listen(3000, () => console.log("server listening on port 3000"));

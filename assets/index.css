@@ -2,7 +2,9 @@
     font-family: "roboto", sans-serif;
 }
 #header {
-    background-color: #7b7dfd;    
+    background-color: #7b7dfd;  
+   
+      
 }
 .card-title{
   font-size: 1rem;
@@ -19,9 +21,11 @@
     -moz-background-clip : text;
     -moz-text-fill-color : transparent;
 }
-nav-link{
+nav-bar{
     color: white;
 }
+
+
 
 .head{
    color: #575aff;
@@ -105,7 +109,7 @@ nav-link{
   width: 100vw; 
   min-height: 100vh;
 }
-.site-main{margin-top: -3%}
+.site-main{margin-top: -3%;}
 .site-main .side-banner .title-text {
  padding-left: 10%;
 }
@@ -158,4 +162,11 @@ nav-link{
   .site-main .side-banner .site-title h4 {
     margin-left: 94px;
   }
+}
+
+.im{
+  margin-left: 400px;
+  margin-top:0px;
+  margin-bottom:0px;
+  
 }

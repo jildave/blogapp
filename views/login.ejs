@@ -1,0 +1,66 @@
+<%- include("./partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>	<link rel="stylesheet" href="/assets/css/all.css">
+		<link rel="stylesheet" href="/assets/css/bootstrap.css">
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/logsi.css">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	</head>
+	<body>
+		<main class="site-main" id="home">
+			<section class="side-banner" >
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-12 site-title">
+		<h2 style="margin-top:130px;margin-left:20px;">Login</h2>
+		<form id="login" style="margin-left:20px;"><br>
+			<input type="text" autocomplete="off" id="username" placeholder="Username" /><br><br>
+			<input type="password" autocomplete="off" id="password" placeholder="Password" /><br><br>
+			<input type="submit" value="Submit" />
+		</form>
+		</div>
+
+		<div class="col-lg-6 col-md-12 banner-image">
+			<img src="../assets/img/s2.svg" alt="banner image" class="img-fluid">
+		</div>
+	</div>
+</div>
+</section>
+
+		<script>
+			const form = document.getElementById('login')
+			form.addEventListener('submit', login)
+
+			async function login(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/login', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					console.log('Got the token: ', result.data)
+					localStorage.setItem('token', result.data)
+					alert('login Successfull')
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html><br><br><br><br><br><br><br><br>
+<%- include("./partials/footer") %>

@@ -13,7 +13,7 @@
 }
 .g-text{
     background-color: #00d2d3;
-    background-image : linear-gradient(to left,rgb(243, 153, 70),rgb(134, 255, 64));
+    background-image : linear-gradient(to left,black,rgb(216, 62, 62));
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip : text;
@@ -106,7 +106,7 @@ nav-bar{
 }
 
 #home {
-  width: 100vw; 
+  width: auto; 
   min-height: 100vh;
 }
 .site-main{margin-top: -3%;}
@@ -116,7 +116,7 @@ nav-bar{
 
 
 .site-main .side-banner .site-title h3 {
- padding-top: 30%;
+ padding-top: 40%;
  font-size: 4rem;
  font-weight: 900;
  background-image:  linear-gradient(to left ,#808e9b, red);
@@ -165,8 +165,9 @@ nav-bar{
 }
 
 .im{
-  margin-left: 400px;
-  margin-top:0px;
-  margin-bottom:0px;
+  margin-left: 50px;
+ max-width:600px;
+ 
+  
   
 }

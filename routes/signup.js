@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const Blog = require('../models/Blog');
+const user = require('../models/user');
+
 
 router.get("/signup", (req, res) => {
     
-    res.render("signup");
+    res.render("signup.ejs");
 })
 
 module.exports = router;
